@@ -1,0 +1,49 @@
+@import './base.css';
+@import './animations.css';
+
+body {
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Lato';
+  background-color: var(--background-body);
+}
+h3,
+p {
+  background-color: transparent !important;
+}
+a,
+a:visited {
+  color: var(--router-link);
+  text-decoration: none;
+  transition: color 125ms ease-in-out;
+}
+
+a:hover {
+  color: var(--secondary-brand-color);
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: 50%;
+  }
+
+  article {
+    .aboutme-top {
+      display: block !important;
+    }
+
+    img {
+      width: 100% !important;
+    }
+
+    font-size: 2em!important;
+  }
+
+  .opening-hours {
+    width: 100% !important;
+  }
+
+  .head-wrapper{
+    display: block!important;
+  }
+}

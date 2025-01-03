@@ -1,0 +1,21 @@
+.animate {
+  opacity: 0;
+  animation: mymove 3s forwards;
+}
+
+.animate-2 {
+  opacity: 0;
+  animation: mymove 2.5s forwards;
+}
+
+.animate-msg {
+  color: var(--background-body);
+  opacity: 0;
+  animation: mymove 1s forwards;
+}
+
+@keyframes mymove {
+  100% {
+    opacity: 1;
+  }
+}
