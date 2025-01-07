@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^www\.systemische-therapie-mueller\.de$ [NC]
+RewriteRule ^(.*)$ https://www.systemische-therapie-mueller.de/$1 [L,R=301]
