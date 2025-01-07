@@ -1,0 +1,23 @@
+{
+    "title": "Angebote im familiengerichtlichen Kontext",
+    "offers": [
+        {
+            "subtitle": "Verfahrensbeistand im Familiengerichtlichen Verfahren – der &bdquo;Anwalt des Kindes&rdquo;",
+            "description": "Als Verfahrensbeistand unterstütze ich dabei, die Wünsche und Bedürfnisse Ihres Kindes zu verstehen und sicherzustellen, dass diese im Verfahren angemessen berücksichtigt werden.",
+            "content": [
+                {
+                    "context":"Vertretung der Interessen des Kindes:",
+                    "description":" Als neutraler und unabhängiger Berater setze ich mich für die Rechte und den Willen des Kindes ein. Ich höre das Kind, erfrage seine Wünsche und sorge dafür, dass diese im Familiengericht berücksichtigt werden."
+                },
+                {
+                    "context":"Begleitung im Verfahren:",
+                    "description":" Ich begleite das Kind durch das gerichtliche Verfahren, informiere es altersgerecht und unterstütze es emotional. So kann es sich sicher und verstanden fühlen."
+                },
+                {
+                    "context":"Unabhängigkeit und Neutralität:",
+                    "description":" Mein Ziel ist es, die Perspektive des Kindes zu wahren und die bestmögliche Lösung unter Berücksichtigung seiner Wünsche zu finden."
+                }
+            ]
+        }
+    ]
+}
