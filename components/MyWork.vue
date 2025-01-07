@@ -4,11 +4,19 @@
         <section v-for="(offer, index) in task.offers" :key="index" class="task-wrapper">
             <h2 v-html="offer.subtitle"></h2>
             <p>{{ offer.description }}</p>
-            <ul v-if="offer.content.length > 1">
-                <li v-for="content in offer.content" :key="content.context">
-                    {{ content.context }}{{ content.description }}
-                </li>
-            </ul>
+            <div v-if="offer.contentList">
+                <h3>Was ich anbiete:</h3>
+                <ul>
+                    <li v-for="content in offer.contentList" :key="content.context">
+                        {{ content.context }}{{ content.description }}
+                    </li>
+                </ul>
+            </div>
+            <div v-if="offer.content" v-for="content in offer.content">
+                <h3 v-if="content.subtitle">{{ content.subtitle }}</h3>
+                <p v-for="text in content.text">{{ text }}</p>
+            </div>
+            <p v-for="text in offer.closingText">{{ text.paragraph }}</p>
         </section>
     </div>
 </template>
@@ -27,10 +35,11 @@ const props = defineProps({
 div.content-wrapper {
     color: var(--font-color);
     width: calc(100% - 3rem);
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1.5rem;
 }
 
 .task-wrapper {
+    padding: 32px 0 0;
     ul {
         display: flex;
         flex-direction: column;

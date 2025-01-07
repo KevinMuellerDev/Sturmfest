@@ -39,6 +39,14 @@ a:hover {
     font-size: 2em!important;
   }
 
+  section{
+    font-size: 2em!important;
+  }
+
+  div.content-wrapper h1{
+    font-size: 2rem!important;
+  }
+
   .opening-hours {
     width: 100% !important;
   }

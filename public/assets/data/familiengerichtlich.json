@@ -2,20 +2,53 @@
     "title": "Angebote im familiengerichtlichen Kontext",
     "offers": [
         {
-            "subtitle": "Verfahrensbeistand im Familiengerichtlichen Verfahren – der &bdquo;Anwalt des Kindes&rdquo;",
+            "subtitle": "Verfahrensbeistand im familiengerichtlichen Verfahren – der &bdquo;Anwalt des Kindes&rdquo;",
             "description": "Als Verfahrensbeistand unterstütze ich dabei, die Wünsche und Bedürfnisse Ihres Kindes zu verstehen und sicherzustellen, dass diese im Verfahren angemessen berücksichtigt werden.",
+            "contentList": [
+                {
+                    "context": "Vertretung der Interessen des Kindes:",
+                    "description": " Als neutraler und unabhängiger Berater setze ich mich für die Rechte und den Willen des Kindes ein. Ich höre das Kind, erfrage seine Wünsche und sorge dafür, dass diese im Familiengericht berücksichtigt werden."
+                },
+                {
+                    "context": "Begleitung im Verfahren:",
+                    "description": " Ich begleite das Kind durch das gerichtliche Verfahren, informiere es altersgerecht und unterstütze es emotional. So kann es sich sicher und verstanden fühlen."
+                },
+                {
+                    "context": "Unabhängigkeit und Neutralität:",
+                    "description": " Mein Ziel ist es, die Perspektive des Kindes zu wahren und die bestmögliche Lösung unter Berücksichtigung seiner Wünsche zu finden."
+                }
+            ],
+            "closingText": [
+                {
+                    "paragraph": "Warum ist ein Verfahrensbeistand wichtig?"
+                },
+                {
+                    "paragraph": "Im familiengerichtlichen Verfahren geht es oft um grundlegende Entscheidungen, die das Leben eines Kindes nachhaltig beeinflussen können. Als Verfahrensbeistand sorge ich dafür, dass das Kind in diesem Prozess gehört wird und seine Stimme Gehör findet. Dies trägt dazu bei, dass Entscheidungen im Sinne des Kindeswillens getroffen werden."
+                },
+                {
+                    "paragraph": "Vertrauen Sie auf meine Erfahrung – im Sinne Ihres Kindes."
+                },
+                {
+                    "paragraph": "Wenn Sie Fragen zu meiner Tätigkeit haben, stehe ich Ihnen gerne für ein unverbindliches Gespräch zur Verfügung."
+                }
+            ]
+        },
+        {
+            "subtitle": "Vormundschaft und Ergänzungspflege für Kinder und Jugendliche",
+            "description": "Als Vormund für Kinder und Jugendliche bin ich im Auftrag des Gerichts dafür zuständig, die rechtlichen und persönlichen Interessen des Kindes oder Jugendlichen zu vertreten. Mein Ziel ist es, dem Kind oder Jugendlichen eine sichere und unterstützende Umgebung zu bieten und gleichzeitig für eine stabile, positive Entwicklung zu sorgen. Hierzu zählt gesetzliche Vertretung: Ich treffe wichtige Entscheidungen im rechtlichen Bereich und vertrete die Interessen des Kindes oder Jugendlichen in allen relevanten Angelegenheiten, wie etwa Kita, Schule, Gesundheitsversorgung, Finanzsorge, Antragsrecht oder Aufenthalt und Umgang. Ich stehe dem Kind oder Jugendlichen zudem als verlässlicher Ansprechpartner zur Seite und sorge dafür, dass seine Wünsche und Bedürfnisse Gehör finden und berücksichtigt werden. Auch stelle ich sicher, dass das Gericht stets über den Stand der Dinge informiert ist und halte alle relevanten Berichte und Dokumentationen aktuell.",
             "content": [
                 {
-                    "context":"Vertretung der Interessen des Kindes:",
-                    "description":" Als neutraler und unabhängiger Berater setze ich mich für die Rechte und den Willen des Kindes ein. Ich höre das Kind, erfrage seine Wünsche und sorge dafür, dass diese im Familiengericht berücksichtigt werden."
-                },
+                    "subtitle": "Warum ist Vormundschaft wichtig?",
+                    "text": [
+                        "Die Vormundschaft stellt sicher, dass Kinder und Jugendliche, deren Eltern nicht in der Lage sind, für sie zu sorgen, die Unterstützung erhalten, die sie brauchen. Als Vormund bin ich dafür verantwortlich, dass das Kindeswohl stets im Mittelpunkt steht und alle Entscheidungen im besten Interesse des Kindes oder Jugendlichen getroffen werden.",
+                        "In manchen Fällen werden mir auch nur Teile des Sorgerechtes übertragen, wie beispielsweise das Umgangsrecht - um das Konfliktfeld darum zwischen den Beteiligten aufzulösen. In diesem Fall werde ich durch das Familiengericht als Ergänzungspflege für den jeweiligen Sorgerechtsbereich eingesetzt.",
+                        "Eine wertschätzende und kindzentrierte Kommunikation ist mir sehr wichtig."
+                    ]
+                }
+            ],
+            "closingText": [
                 {
-                    "context":"Begleitung im Verfahren:",
-                    "description":" Ich begleite das Kind durch das gerichtliche Verfahren, informiere es altersgerecht und unterstütze es emotional. So kann es sich sicher und verstanden fühlen."
-                },
-                {
-                    "context":"Unabhängigkeit und Neutralität:",
-                    "description":" Mein Ziel ist es, die Perspektive des Kindes zu wahren und die bestmögliche Lösung unter Berücksichtigung seiner Wünsche zu finden."
+                    "paragraph": "Wenn Ihr Kind oder Sie also Fragen zur Vormundschaft haben, stehe ich Ihnen gerne für ein Gespräch zur Verfügung."
                 }
             ]
         }
