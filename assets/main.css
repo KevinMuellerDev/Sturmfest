@@ -7,6 +7,10 @@ body {
   font-family: 'Lato';
   background-color: var(--background-body);
 }
+html,body{
+  overflow-x: hidden;
+}
+
 h3,
 p {
   background-color: transparent !important;
@@ -25,6 +29,14 @@ a:hover {
 @media (max-width: 750px) {
   body {
     font-size: 50%;
+  }
+
+  .menu_open {
+    animation-name: menu-slidein-mobile!important;
+  }
+
+  .menu-close{
+    animation-name: menu-slideout-mobile!important;
   }
 
   article {
