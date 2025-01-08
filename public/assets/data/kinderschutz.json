@@ -1,0 +1,36 @@
+{
+    "title": "Angebot Kinderschutzfachberatung",
+    "offers": [
+        {
+            "subtitle": "Kinderschutzfachberatung nach § 8b SGB VIII für Schulen, Kitas und Jugendhilfeeinrichtungen",
+            "description": "Kinder und Jugendliche sind unser wertvollstes Gut. In einer Zeit, in der das Thema Kinderschutz immer wichtiger wird, unterstütze ich Fachkräfte in Schulen, Kitas und Jugendhilfeeinrichtungen dabei, Risiken frühzeitig zu erkennen und adäquat zu handeln. Mit Kinderschutzfachberatung nach § 8b SGB VIII helfe ich Ihnen, Kinder und Jugendliche bestmöglich zu schützen.",
+            "contentList": [
+                {
+                    "context": "Prävention und Intervention:",
+                    "description": " Ich unterstütze Ihr Team dabei, Anzeichen von Kindeswohlgefährdung frühzeitig zu erkennen und angemessen zu handeln."
+                },
+                {
+                    "context": "Beratung in akuten Fällen:",
+                    "description": " Stehen Verdachtsmomente im Raum, stehe ich Ihnen mit professioneller Beratung und konkreten Handlungsempfehlungen zur Seite."
+                },
+                {
+                    "context": "Gefährdungseinschätzungen und Maßnahmenpläne:",
+                    "description": " Gemeinsam mit Ihrem Team erarbeite ich Gefährdungseinschätzungen und maßgeschneiderte Maßnahmenpläne, damit Sie sicher und gezielt handeln können."
+                }
+            ],
+            "closingText":[
+
+                {
+                    "header":"Warum ist Kinderschutzfachberatung wichtig?",
+                    "paragraph":"Gemäß § 8b SGB VIII sind Fachkräfte verpflichtet, das Wohl von Kindern und Jugendlichen zu sichern und in Gefährdungsfällen angemessen zu handeln. Mit meiner Kinderschutzfachberatung stelle ich sicher, dass Ihr Team über die nötige Expertise und Unterstützung verfügt, um diesen Anforderungen gerecht zu werden. Gemeinsam können wir eine sichere und förderliche Umgebung für die Entwicklung unserer Kinder schaffen."
+                },
+                {
+                    "paragraph":"Vertrauen Sie auf meine Expertise – Für das Wohl Ihrer Kinder."
+                },
+                {
+                    "paragraph":"Kontaktieren Sie mich, um mehr über meine Kinderschutzfachberatung und die Unterstützungsmöglichkeiten für Ihr Team zu erfahren!"
+                }
+            ]
+        }
+    ]
+}

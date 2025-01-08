@@ -16,7 +16,10 @@
                 <h3 v-if="content.subtitle">{{ content.subtitle }}</h3>
                 <p v-for="text in content.text">{{ text }}</p>
             </div>
-            <p v-for="text in offer.closingText">{{ text.paragraph }}</p>
+            <div v-for="text in offer.closingText">
+                <h3 v-if="text.header">{{ text.header }}</h3>
+                <p>{{ text.paragraph }}</p>
+            </div>
         </section>
     </div>
 </template>
@@ -26,7 +29,7 @@ const props = defineProps({
     task: {
         type: Object,
         required: true
-    }
+    } 
 })
 
 </script>
@@ -36,6 +39,10 @@ div.content-wrapper {
     color: var(--font-color);
     width: calc(100% - 3rem);
     padding: 0 1.5rem 1.5rem;
+
+    h1{
+        overflow-wrap: break-word;
+    }
 }
 
 .task-wrapper {
