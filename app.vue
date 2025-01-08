@@ -8,7 +8,7 @@ const allowCloseAnimation = ref(false);
 
 const toggleNavIcon = () => {
   if (!menuOpen.value) {
-    allowCloseAnimation.value=true
+    allowCloseAnimation.value = true
   }
   isOpen.value = !isOpen.value;
   menuOpen.value = !menuOpen.value;
@@ -18,40 +18,47 @@ const toggleNavIcon = () => {
 <template>
   <div class="mobile-wrapper">
     <header>
-    <nav>
-      <div id="nav-icon4" :class="{ open: isOpen }" @click="toggleNavIcon">
-        <span></span>
-        <span></span>
-        <span></span>
+      <nav>
+        <div id="nav-icon4" :class="{ open: isOpen }" @click="toggleNavIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <div class="menu-bar" :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''">
+        <div>
+          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
+          <NuxtLink to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext</NuxtLink>
+          <NuxtLink to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung</NuxtLink>
+        </div>
+        <div>
+          <NuxtLink to="/impressum">Impressum</NuxtLink>
+          <NuxtLink to="/privacypolicy">Datenschutzerklärung</NuxtLink>
+        </div>
+
       </div>
-    </nav>
-    <div class="menu-bar" :class=" menuOpen? 'menu_open ': allowCloseAnimation ? 'menu_close': '' ">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
-      <NuxtLink to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext</NuxtLink>
-      <NuxtLink to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung</NuxtLink>
+    </header>
+    <div class="atf-picture">
+      <div class="logo">
+        <img class="animate" src="/assets/images/test.png" alt="">
+      </div>
+      <img class="background-atf" src="/assets/images/atf_background.webp" alt="">
     </div>
-  </header>
-  <div class="atf-picture">
-    <div class="logo">
-      <img class="animate" src="/assets/images/test.png" alt="">
-    </div>
-    <img class="background-atf" src="/assets/images/atf_background.webp" alt="">
-  </div>
-  <main>
-    <div class="content animate-2">
-      <NuxtPage />
-    </div>
-  </main>
-  <footer>
-    <div class="img-links">
-      <a href="https://www.bveb-ev.de/" target="_blank"><img src="/assets/images/bveb_logo.png" alt="bveb_logo"></a>
-    </div>
-    <div class="site-links">
-      <NuxtLink to="/impressum" activeClass="link-active">Impressum</NuxtLink>
-      <NuxtLink to="/privacypolicy" activeClass="link-active">Datenschutz / Haftungsausschluss</NuxtLink>
-    </div>
-  </footer>
+    <main>
+      <div class="content animate-2">
+        <NuxtPage />
+      </div>
+    </main>
+    <footer>
+      <div class="img-links">
+        <a href="https://www.bveb-ev.de/" target="_blank"><img src="/assets/images/bveb_logo.png" alt="bveb_logo"></a>
+      </div>
+      <div class="site-links">
+        <NuxtLink to="/impressum" activeClass="link-active">Impressum</NuxtLink>
+        <NuxtLink to="/privacypolicy" activeClass="link-active">Datenschutz / Haftungsausschluss</NuxtLink>
+      </div>
+    </footer>
 
   </div>
 
@@ -59,7 +66,7 @@ const toggleNavIcon = () => {
 <style lang="scss">
 @import './assets/main.css';
 
-.mobile-wrapper{
+.mobile-wrapper {
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -77,19 +84,26 @@ header {
   .menu-bar {
     position: fixed;
     border-radius: 0 0 0 16px;
-    right:0;
+    right: 0;
     top: 0;
     width: 0;
     padding: 64px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 64px;
     background-color: rgba($color: #524d41, $alpha: 0.9);
     opacity: 0;
     overflow-x: hidden;
 
-    a{
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    a {
       font-size: 2rem;
       text-align: center;
     }
@@ -199,7 +213,7 @@ header {
 
 @keyframes menu-slidein {
   from {
-    width:0;
+    width: 0;
     opacity: 0;
   }
 
@@ -211,7 +225,7 @@ header {
 
 @keyframes menu-slidein-mobile {
   from {
-    width:0;
+    width: 0;
     opacity: 0;
   }
 
