@@ -1,0 +1,41 @@
+{
+    "title": "",
+    "offers": [
+        {
+            "subtitle": "Systemische Familientherapie, Paartherapie, Einzeltherapie sowie kindzentrierte Familientherapie – Gemeinsam Lösungen finden",
+            "description":"In schwierigen Lebensphasen, bei Konflikten oder persönlichen Herausforderungen kann es schwer sein, den richtigen Weg zu finden. Ich unterstütze Sie und Ihre Familie dabei, neue Perspektiven zu entwickeln und gemeinsam Lösungen zu finden – sei es in der Familie, in der Partnerschaft, bei Kindern oder im individuellen Leben.",
+            "contentList":[
+                {
+                    "context": "Systemische Familientherapie:",
+                    "description": " In der Familientherapie arbeite ich mit Ihnen und Ihrer Familie daran, festgefahrene Muster zu erkennen und neue Wege der Kommunikation und Zusammenarbeit zu entwickeln. Gemeinsam finden wir Lösungen, um das familiäre Miteinander zu stärken und Konflikte nachhaltig zu lösen." 
+                },
+                {
+                    "context": "Paartherapie:",
+                    "description": " In der Paartherapie helfe ich Ihnen und Ihrem Partner, die Verbindung zueinander wiederzufinden, Missverständnisse zu klären und eine respektvolle und liebevolle Kommunikation zu fördern. Wir arbeiten daran, Ihre Beziehung zu stabilisieren und neue Lösungsansätze für bestehende Probleme zu entwickeln." 
+                },
+                {
+                    "context":"Einzeltherapie:",
+                    "description":" In der Einzeltherapie begleite ich Sie auf Ihrem Weg zu mehr Selbstverständnis und innerer Balance. Gemeinsam arbeiten wir an Ihren individuellen Themen, seien es Stress, Ängste, Verstimmungen oder andere Belastungen im privaten oder beruflichen Kontext. Ich helfe Ihnen gerne, Ihre individuellen Ressourcen zu entdecken!"
+                },
+                {
+                    "context":"Kindzentrierte Familientherapie:",
+                    "description":" In der kindzentrierten Familientherapie steht das Kind im Mittelpunkt, während die gesamte Familie in den Therapieprozess einbezogen wird. Ich unterstütze die Familie dabei, die Bedürfnisse des Kindes besser zu verstehen, Konflikte zu lösen und eine harmonische, unterstützende Umgebung zu schaffen, in der das Kind emotional wachsen kann. Dies ist besonders hilfreich, wenn das Verhalten des Kindes kreativ ist und möglicherweise ein Familiensymptom sichtbar macht."
+                }
+            ],
+            "closingText":[
+                {
+                    "paragraph":"Warum systemische Therapie?"
+                },
+                {
+                    "paragraph":"Die systemische Therapie betrachtet nicht nur das einzelne Individuum, sondern auch das Umfeld, in dem es lebt. In der Familien- oder Paarberatung sehe ich das gesamte System und finde mit Ihnen gemeinsam Lösungen, die für alle Beteiligten nachhaltig sind ."
+                },
+                {
+                    "paragraph":"Vertrauen Sie auf meine Erfahrung – Gemeinsam gehen wir den Weg zu einer positiven Veränderung."
+                },
+                {
+                    "paragraph":"Kontaktieren Sie mich, um mehr über meine Therapieangebote für Einzelpersonen, Paare, Familien und Kinder zu erfahren und den ersten Schritt in Richtung Veränderung zu machen."
+                }
+            ]
+        }
+    ]
+}
