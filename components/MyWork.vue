@@ -1,6 +1,7 @@
 <template>
     <div class="content-wrapper">
         <h1>{{ task.title }}</h1>
+        <img v-if="task.img" :src="`/assets/${task.img}`" alt="">
         <section v-for="(offer, index) in task.offers" :key="index" class="task-wrapper">
             <h2 v-html="offer.subtitle"></h2>
             <p>{{ offer.description }}</p>
@@ -25,6 +26,7 @@
 </template>
 
 <script setup lang="ts">
+
 const props = defineProps({
     task: {
         type: Object,
@@ -42,6 +44,12 @@ div.content-wrapper {
 
     h1{
         overflow-wrap: break-word;
+    }
+
+    img{
+        width: 100%;
+        max-width: 300px;
+        border-radius: 16px;
     }
 }
 
