@@ -27,14 +27,15 @@ const toggleNavIcon = () => {
       </nav>
       <div class="menu-bar" :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''">
         <div>
-          <NuxtLink to="/">Home</NuxtLink>
-          <NuxtLink to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
-          <NuxtLink to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext</NuxtLink>
-          <NuxtLink to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/">Home</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/qualifikationen">Qualifikationen</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung</NuxtLink>
         </div>
         <div>
-          <NuxtLink to="/impressum">Impressum</NuxtLink>
-          <NuxtLink to="/privacypolicy">Datenschutzerklärung</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/impressum">Impressum</NuxtLink>
+          <NuxtLink @click="toggleNavIcon" to="/privacypolicy">Datenschutzerklärung</NuxtLink>
         </div>
 
       </div>

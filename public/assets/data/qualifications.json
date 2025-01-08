@@ -1,0 +1,104 @@
+[
+    {
+        "title": "Berufliche Qualifikationen",
+        "content": [
+            {
+                "subtitle": "Staatlich anerkannte Erzieherin",
+                "pre": "Seit:",
+                "since": "2013"
+            },
+            {
+                "subtitle": "Zertifizierte Inklusionsberaterin",
+                "pre": "Seit:",
+                "since": "2020",
+                "keyPoints": [
+                    "Kinder mit Narben auf der Seele (Trauma und Dissoziation)",
+                    "Geistige/Seelische Behinderung (Entwicklungsstörungen, Autismus, FASD...)",
+                    "Kinder psychisch erkrankter Eltern"
+                ]
+            },
+            {
+                "subtitle": "Staatlich anerkannte Kindheitspädagogin B.A.",
+                "pre": "Seit:",
+                "since": "2020",
+                "keyPoints": [
+                    "Vertiefungsfach Beratung"
+                ]
+            },
+            {
+                "subtitle": "Zertifizierter Verfahrensbeistand nach BVEB",
+                "pre": "Seit:",
+                "since": "2021"
+            },
+            {
+                "subtitle": "Qualifizierung als insoweit erfahrene Kinderschutzfachkraft und Fachberaterin im Sinne des §8a SGB VIII",
+                "pre": "Seit:",
+                "since": "2023"
+            },
+            {
+                "subtitle": "Systemische Familientherapeutin i.V. Grundzüge der Supervision (in Ausbildung)",
+                "pre": "Seit:",
+                "since": "2023"
+            }
+        ]
+    },
+    {
+        "title": "Berufliche Praxis",
+        "content": [
+            {
+                "subtitle": "Anerkennungsjahr",
+                "pre": "Zeitraum:",
+                "since": "2013 - 2014",
+                "additional": [
+                    "Verselbstständigungswohngruppe (14-18 Jahre)",
+                    "Jugendhilfe Selbecke",
+                    "Hagen"
+                ]
+            },
+            {
+                "subtitle": "Erzieherin",
+                "pre": "Zeitraum:",
+                "since": "2014 - 2016",
+                "additional": [
+                    "Pädagogische Fachkraft",
+                    "Kinderdorffamilie (4-18 Jahre)",
+                    "SOS-Kinderdorf e.V.",
+                    "Lüdenscheid"
+                ]
+            },
+            {
+                "subtitle": "Erzieherin",
+                "pre": "Zeitraum:",
+                "since": "2016 - 2020",
+                "additional": [
+                    "Pädagogische Fachkraft",
+                    "Familienanaloge Wohngruppe (4-18 Jahre)",
+                    "SOS-Kinderdorf e.V.",
+                    "Lüdenscheid"
+                ]
+            },
+            {
+                "subtitle": "Kindheitspädagogin B.A.",
+                "pre": "Zeitraum:",
+                "since": "2020-2024",
+                "additional": [
+                    "Koordinatorin",
+                    "Klärungs-und Diagnosegruppe",
+                    "SOS-Kinderdorf e.V.",
+                    "Dortmund"
+                ]
+            },
+            {
+                "subtitle": "Kindheitspädagogin B.A.",
+                "pre": "Zeitraum:",
+                "since": "2023-2024",
+                "additional": [
+                    "Pädagogische Bereichsleiterin",
+                    "Stationäre Angebote",
+                    "SOS-Kinderdorf e.V.",
+                    "Dortmund"
+                ]
+            }
+        ]
+    }
+]
