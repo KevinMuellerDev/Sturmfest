@@ -50,12 +50,20 @@ div.content-wrapper {
     }
 }
 
+
+
 .task-wrapper {
     padding: 32px 0 0;
     ul {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+}
+
+@media (max-width:750px) {
+    div.content-wrapper{
+        display: block!important;
     }
 }
 </style>
