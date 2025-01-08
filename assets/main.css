@@ -26,9 +26,9 @@ a:hover {
   color: var(--secondary-brand-color);
 }
 
-@media (max-width: 750px) {
-  body {
-    font-size: 50%;
+@media (max-width:1250px) {
+  .menu-bar{
+    border-radius: 0!important;
   }
 
   .menu_open {
@@ -37,6 +37,12 @@ a:hover {
 
   .menu-close{
     animation-name: menu-slideout-mobile!important;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: 50%;
   }
 
   article {

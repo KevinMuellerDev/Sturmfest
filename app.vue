@@ -29,8 +29,7 @@ const toggleNavIcon = () => {
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
       <NuxtLink to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext</NuxtLink>
-      <NuxtLink to="/angebot/kinderschutzfachberatung">Kinderschutz Fachberatung</NuxtLink>
-
+      <NuxtLink to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung</NuxtLink>
     </div>
   </header>
   <div class="atf-picture">
@@ -68,7 +67,6 @@ const toggleNavIcon = () => {
 header {
   position: absolute;
   top: 0;
-
   z-index: 15;
   display: flex;
   justify-content: end;
@@ -77,12 +75,12 @@ header {
   width: 100%;
 
   .menu-bar {
-    position: absolute;
+    position: fixed;
+    border-radius: 0 0 0 16px;
     right:0;
     top: 0;
     width: 0;
-    height: 100dvh;
-    padding-top: 64px ;
+    padding: 64px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,15 +89,11 @@ header {
     opacity: 0;
     overflow-x: hidden;
 
-    
     a{
       font-size: 2rem;
       text-align: center;
     }
   }
-
-
-
 
   nav {
     display: flex;
@@ -112,7 +106,9 @@ header {
     }
 
     #nav-icon4 {
+      position: fixed;
       width: 30px;
+      right: 32px;
       height: 22.5px;
       z-index: 1000;
       -webkit-transform: rotate(0deg);
@@ -124,8 +120,6 @@ header {
       -o-transition: .5s ease-in-out;
       transition: .5s ease-in-out;
       cursor: pointer;
-
-
     }
 
     #nav-icon4 span {
@@ -195,9 +189,7 @@ header {
     }
   }
 
-
 }
-
 
 .menu_open {
   animation-duration: 0.5s;
@@ -259,7 +251,6 @@ header {
   }
 }
 
-
 .atf-picture {
   position: relative;
   display: flex;
@@ -281,6 +272,7 @@ header {
       width: calc(100% - 6em);
       max-width: 45.25em;
       z-index: 10;
+
     }
   }
 
@@ -289,8 +281,8 @@ header {
     top: 0;
     min-width: 100dvw;
     max-width: 100dvw;
-    max-height: 100vh;
-    object-fit: cover;
+    max-height: 80vh;
+    object-fit: fill;
   }
 }
 
