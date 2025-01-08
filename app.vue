@@ -127,7 +127,7 @@ header {
       position: absolute;
       height: 3px;
       width: 100%;
-      background: var(--secondary-brand-color);
+      background: #9a9a9a;
       border-radius: 9px;
       opacity: 1;
       left: 0;
