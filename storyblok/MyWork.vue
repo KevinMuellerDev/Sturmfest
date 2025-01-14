@@ -1,11 +1,11 @@
 <template>
     <div class="content-wrapper">
-        <h1>{{ task.title }}</h1>
-        <img v-if="task.img" :src="`/assets/${task.img}`" alt="">
-        <section v-for="(offer, index) in task.offers" :key="index" class="task-wrapper">
+        <h1>{{blok?.title }}</h1>
+        <img v-if="blok" :src="`/assets/${blok!.image}`" alt="">
+        <section v-for="(offer, index) in blok?.offers" :key="index" class="task-wrapper">
             <h2 v-html="offer.subtitle"></h2>
             <p>{{ offer.description }}</p>
-            <div v-if="offer.contentList">
+<!--             <div v-if="offer.contentList">
                 <h3>Was ich anbiete:</h3>
                 <ul>
                     <li v-for="content in offer.contentList" :key="content.context">
@@ -20,19 +20,14 @@
             <div v-for="text in offer.closingText">
                 <h3 v-if="text.header">{{ text.header }}</h3>
                 <p>{{ text.paragraph }}</p>
-            </div>
-        </section>
+            </div> -->
+        </section> 
     </div>
 </template>
 
 <script setup lang="ts">
 
-const props = defineProps({
-    task: {
-        type: Object,
-        required: true
-    } 
-})
+const props = defineProps({ blok: Object })
 
 </script>
 

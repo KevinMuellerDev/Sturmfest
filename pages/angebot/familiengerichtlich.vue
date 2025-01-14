@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MyWork from '~/components/MyWork.vue';
+import MyWork from '~/storyblok/MyWork.vue';
 import taskData from '~/public/assets/data/familiengerichtlich.json'
 
 const task = taskData
