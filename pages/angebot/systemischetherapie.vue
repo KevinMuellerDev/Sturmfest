@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const story = await useStoryblok('angebot/systemischetherapie', { version: 'draft' });
+const story = await useAsyncStoryblok('angebot/systemischetherapie', { version: 'draft' });
 </script>
 
 <template>

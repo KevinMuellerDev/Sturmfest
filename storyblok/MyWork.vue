@@ -1,5 +1,5 @@
 <template>
-    <div class="content-wrapper" v-editable="blok">
+    <div class="content-wrapper" >
         <h1>{{ blok?.title }}</h1>
         <img v-if="blok" :src="blok!.image.filename" :alt="blok!.image.alt" />
         <section v-for="(offer, index) in blok?.offers" :key="index" class="task-wrapper">
