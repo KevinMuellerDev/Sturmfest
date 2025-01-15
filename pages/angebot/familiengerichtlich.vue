@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import MyWork from '~/storyblok/MyWork.vue';
-import taskData from '~/public/assets/data/familiengerichtlich.json'
-
-const task = taskData
+const story = await useStoryblok('angebot/familiengerichtlich', { version: 'draft' });
 </script>
 
 <template>
-    <MyWork :task="task"/>
+    <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
