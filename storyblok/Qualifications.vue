@@ -1,18 +1,18 @@
 <template>
     <div class="content-wrapper">
-        <section v-for="(quali, index) in qualification" :key="index" class="task-wrapper">
+        <section v-for="(quali, index) in blok?.content" :key="quali._uid" class="task-wrapper">
             <h1>{{ quali.title }}</h1>
             <ul>
-                <li v-for="content in quali.content">
+                <li v-for="content in quali.qualificationmodule || quali.workexperiencemodule">
                     <h3>{{ content.subtitle }}</h3>
                     <p><b>{{content.pre}}</b> {{ content.since }}</p>
                     <ul v-if="content.keyPoints">
                         <li v-for=" point in content.keyPoints">
-                            {{ point }}
+                            {{ point.paragraph }}
                         </li>
                     </ul>
-                    <div v-if="content.additional">
-                        <p v-for="point in content.additional">{{ point }}</p>
+                    <div v-if="content.employerInfo">
+                        <p v-for="point in content.employerInfo">{{ point.paragraph }}</p>
                     </div>
                 </li>
             </ul>
@@ -22,11 +22,10 @@
 
 <script setup lang="ts">
 
-const props = defineProps({
-    qualification: {
-        type: Object,
-        required: true
-    } 
+const props = defineProps({ blok: Object })
+onMounted(() => {
+    console.log(props.blok?.content[1]._uid);
+    
 })
 
 </script>

@@ -7,10 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     'nuxt-og-image',
     '@nuxt/image',
-    ['@storyblok/nuxt', { accessToken: 'KDNe7UxQOr46IRpc2Hw5rAtt',apiOptions:{region:"eu"} }],
-    ],
-  site: {
-    url: 'https://example.com',
-    name: 'My Awesome Website'
-  },
+    ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY, apiOptions: { region: "eu" } }],
+  ],
+
 })

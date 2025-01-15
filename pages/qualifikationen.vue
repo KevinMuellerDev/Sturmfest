@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import Qualifications from '~/components/Qualifications.vue';
-import qualification from '~/public/assets/data/qualifications.json'
-
-const quali = qualification
+const story = await useStoryblok('qualifikationen', { version: 'draft' }); 
 </script>
 
 <template>
-    <Qualifications :qualification="quali"/>
+    <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
