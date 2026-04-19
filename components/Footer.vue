@@ -46,7 +46,7 @@ footer {
             font-size: var(--text-sm);
 
             &:hover {
-                color: #a8d4e0;
+                color: var(--border-hover);
             }
         }
     }

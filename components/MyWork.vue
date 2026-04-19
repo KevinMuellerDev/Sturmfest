@@ -44,8 +44,12 @@ const props = defineProps({
   width: 100%;
   max-width: 320px;
   border-radius: 12px;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
   box-shadow: 0 2px 12px rgba(77, 124, 138, 0.15);
+
+  @media (max-width: 768px) {
+    margin: 0 auto 2rem;
+  }
 }
 
 .task-section {

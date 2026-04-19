@@ -1,5 +1,8 @@
 <script setup lang="ts">
 useHead({
+  link: [
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+  ],
   script: [
     {
       type: 'application/ld+json',
@@ -37,9 +40,9 @@ useHead({
     <Header />
     <div class="atf-picture">
       <div class="logo">
-        <img class="animate" src="/assets/images/test.png" alt="">
+        <img class="animate" src="/assets/images/test.png" alt="Logo Sturmfest Systemische Therapie">
       </div>
-      <img class="background-atf" src="/assets/images/atf_background.webp" alt="">
+      <img class="background-atf" src="/assets/images/atf_background.webp" alt="Küstenlandschaft mit Pflanze und Regenbogen">
     </div>
     <main>
       <div class="content animate-2">
@@ -86,6 +89,7 @@ useHead({
     max-width: 100dvw;
     max-height: 80vh;
     object-fit: fill;
+
   }
 }
 

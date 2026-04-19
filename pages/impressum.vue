@@ -123,7 +123,7 @@
 .impressum-wrapper {
     padding: 2rem;
     max-width: calc(100dvw - 2rem);
-    font-size: 1.5em;
+    font-size: var(--text-base);
     color: var(--font-color);
 }
 </style>

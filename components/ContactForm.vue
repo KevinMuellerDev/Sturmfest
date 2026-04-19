@@ -310,7 +310,7 @@ form {
 
   #spinner {
     position: absolute;
-    --c: no-repeat linear-gradient(#a8d4e0 0 0);
+    --c: no-repeat linear-gradient(#adc4af 0 0);
     background:
       var(--c), var(--c), var(--c),
       var(--c), var(--c), var(--c),

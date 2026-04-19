@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: true,
+  app: {
+    pageTransition: { name: 'page' }
+  },
   modules: ['@nuxtjs/robots', '@nuxtjs/sitemap', 'nuxt-og-image', '@nuxt/image'],
   site: {
     url: 'https://www.systemische-therapie-mueller.de',
