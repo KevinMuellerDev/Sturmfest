@@ -1,15 +1,15 @@
 :root {
   /* Colors */
-  --background-body: #f7f5f1;
-  --primary-brand-color: #4d7c8a;
-  --primary-brand-dark: #3d6170;
-  --primary-brand-light: #f0f6f8;
-  --color-menu-overlay: rgba(61, 97, 112, 0.97);
-  --secondary-brand-color: #e8f0f2;
-  --border-active: #6a9aaa;
-  --border-hover: #a8c8d4;
+  --background-body: #f6f5f0;
+  --primary-brand-color: #6b8c6e;
+  --primary-brand-dark: #3d5c3f;
+  --primary-brand-light: #f0f5f0;
+  --color-menu-overlay: rgba(61, 92, 63, 0.97);
+  --secondary-brand-color: #edf2ed;
+  --border-active: #829e85;
+  --border-hover: #adc4af;
   --font-color: #2e2a24;
-  --router-link: #3d6b78;
+  --router-link: #4d7050;
 
   /* Typography */
   --font-body: 'Inter', sans-serif;
