@@ -180,6 +180,7 @@ form {
       color: var(--text-color);
       cursor: pointer;
       font-size: 16px;
+      font-family: inherit;
 
       &:hover {
         border-color: var(--hover);
@@ -272,12 +273,14 @@ form {
     }
 
     &:active {
-      background-image: linear-gradient(to right, rgb(95 90 73), rgb(82, 77, 65));
+      background-image: linear-gradient(to right, var(--primary-brand-dark), color-mix(in srgb, var(--primary-brand-dark) 75%, black));
     }
   }
 
   .submit-change {
-    background-image: linear-gradient(to right, rgb(137 135 105), rgb(117 113 89));
+    background-image: linear-gradient(to right, var(--primary-brand-color), var(--primary-brand-dark));
+    color: var(--primary-brand-light);
+    border: none;
   }
 }
 
@@ -307,7 +310,7 @@ form {
 
   #spinner {
     position: absolute;
-    --c: no-repeat linear-gradient(orange 0 0);
+    --c: no-repeat linear-gradient(#adc4af 0 0);
     background:
       var(--c), var(--c), var(--c),
       var(--c), var(--c), var(--c),

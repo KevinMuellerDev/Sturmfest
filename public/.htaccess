@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# www-Redirect
+RewriteCond %{HTTP_HOST} !^www\.systemische-therapie-mueller\.de$ [NC]
+RewriteRule ^(.*)$ https://www.systemische-therapie-mueller.de/$1 [L,R=301]
+
+# Caching für statische Assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Zeichensatz
+<IfModule mod_mime.c>
+  AddDefaultCharset UTF-8
+  AddCharset UTF-8 .html .css .js .json .xml .svg
+</IfModule>
+
+# 404 Fallback
+ErrorDocument 404 /404.html

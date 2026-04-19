@@ -1,5 +1,38 @@
 <script setup lang="ts">
-
+useHead({
+  link: [
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': 'https://www.systemische-therapie-mueller.de',
+        name: 'Sturmfest – Systemische Therapie Cathrin Müller',
+        description: 'Systemische Einzel-, Paar- und Familientherapie, Verfahrensbeistandschaft und Kinderschutzfachberatung in Dortmund.',
+        url: 'https://www.systemische-therapie-mueller.de',
+        telephone: '+4917662817991',
+        email: 'info@systemische-therapie-mueller.de',
+        image: 'https://www.systemische-therapie-mueller.de/assets/images/cathi_profil.webp',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Christine-Teusch-Bogen 47',
+          addressLocality: 'Dortmund',
+          postalCode: '44329',
+          addressCountry: 'DE'
+        },
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          description: 'Nur nach Vereinbarung'
+        },
+        sameAs: ['https://www.bveb-ev.de/']
+      })
+    }
+  ]
+})
 </script>
 
 <template>
@@ -7,9 +40,9 @@
     <Header />
     <div class="atf-picture">
       <div class="logo">
-        <img class="animate" src="/assets/images/test.png" alt="">
+        <img class="animate" src="/assets/images/test.png" alt="Logo Sturmfest Systemische Therapie">
       </div>
-      <img class="background-atf" src="/assets/images/atf_background.webp" alt="">
+      <img class="background-atf" src="/assets/images/atf_background.webp" alt="Küstenlandschaft mit Pflanze und Regenbogen">
     </div>
     <main>
       <div class="content animate-2">
@@ -56,6 +89,7 @@
     max-width: 100dvw;
     max-height: 80vh;
     object-fit: fill;
+
   }
 }
 
