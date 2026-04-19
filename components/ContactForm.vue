@@ -273,13 +273,13 @@ form {
     }
 
     &:active {
-      background-image: linear-gradient(to right, #3d6170, #2d4f5c);
+      background-image: linear-gradient(to right, var(--primary-brand-dark), color-mix(in srgb, var(--primary-brand-dark) 75%, black));
     }
   }
 
   .submit-change {
-    background-image: linear-gradient(to right, #4d7c8a, #3d6170);
-    color: #f0f6f8;
+    background-image: linear-gradient(to right, var(--primary-brand-color), var(--primary-brand-dark));
+    color: var(--primary-brand-light);
     border: none;
   }
 }

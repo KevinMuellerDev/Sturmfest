@@ -89,7 +89,7 @@ header {
     height: 2px;
     width: 100%;
     border-radius: 2px;
-    background: #f0f6f8;
+    background: var(--primary-brand-light);
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
     transition: background 0.3s ease, filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
 
@@ -99,7 +99,7 @@ header {
   }
 
   &.open span {
-    background: #f0f6f8;
+    background: var(--primary-brand-light);
     filter: none;
 
     &:nth-child(1) { transform: rotate(45deg); top: 9px; }
@@ -110,7 +110,7 @@ header {
 
 /* Dark hamburger when scrolled past ATF */
 header.scrolled #nav-icon:not(.open) span {
-  background: #3d6170;
+  background: var(--primary-brand-dark);
   filter: none;
 }
 
@@ -141,7 +141,7 @@ header.scrolled #nav-icon:not(.open) span {
   height: 100dvh;
   width: 360px;
   max-width: 90vw;
-  background: rgba(#3d6170, 0.97);
+  background: var(--color-menu-overlay);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transform: translateX(100%);
@@ -168,7 +168,7 @@ header.scrolled #nav-icon:not(.open) span {
       font-family: var(--font-display);
       font-size: 1.35rem;
       font-weight: 700;
-      color: #f0f6f8;
+      color: var(--primary-brand-light);
       text-decoration: none;
       padding: 0.5rem 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -181,12 +181,12 @@ header.scrolled #nav-icon:not(.open) span {
       }
 
       &:hover {
-        color: #a8d4e0;
+        color: var(--border-hover);
         padding-left: 0.5rem;
       }
 
       &.router-link-active {
-        color: #a8d4e0;
+        color: var(--border-hover);
       }
     }
   }
@@ -202,14 +202,14 @@ header.scrolled #nav-icon:not(.open) span {
       font-family: var(--font-body);
       font-size: 0.85rem;
       font-weight: 400;
-      color: rgba(#f0f6f8, 0.55);
+      color: color-mix(in srgb, var(--primary-brand-light) 55%, transparent);
       text-decoration: none;
       cursor: pointer;
       transition: color 0.2s ease;
       letter-spacing: 0.02em;
 
       &:hover {
-        color: rgba(#f0f6f8, 0.9);
+        color: color-mix(in srgb, var(--primary-brand-light) 90%, transparent);
       }
     }
   }
