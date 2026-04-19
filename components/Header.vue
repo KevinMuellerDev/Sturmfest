@@ -1,240 +1,260 @@
 <template>
-    <header>
-        <nav>
-            <div id="nav-icon4" :class="{ open: isOpen }" @click="toggleNavIcon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-        <div class="menu-bar" :class="menuOpen ? 'menu_open ' : allowCloseAnimation ? 'menu_close' : ''">
-            <div>
-                <NuxtLink @click="toggleNavIcon" to="/">Home</NuxtLink>
-                <NuxtLink @click="toggleNavIcon" to="/qualifikationen">Qualifikationen</NuxtLink>
-                <NuxtLink @click="toggleNavIcon" to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
-                <NuxtLink @click="toggleNavIcon" to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext
-                </NuxtLink>
-                <NuxtLink @click="toggleNavIcon" to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung
-                </NuxtLink>
-            </div>
-            <div>
-                <NuxtLink @click="toggleNavIcon" to="/impressum">Impressum</NuxtLink>
-                <NuxtLink @click="toggleNavIcon" to="/privacypolicy">Datenschutzerklärung</NuxtLink>
-            </div>
+  <header :class="{ scrolled: isScrolled }">
+    <nav>
+      <button id="nav-icon" :class="{ open: isOpen }" @click="toggleMenu" aria-label="Menü öffnen/schließen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
-        </div>
-    </header>
+    <div class="menu-backdrop" :class="{ visible: menuOpen }" @click="closeMenu" />
+
+    <div class="menu-panel" :class="{ open: menuOpen }">
+      <div class="menu-nav">
+        <NuxtLink @click="closeMenu" to="/">Home</NuxtLink>
+        <NuxtLink @click="closeMenu" to="/qualifikationen">Qualifikationen</NuxtLink>
+        <NuxtLink @click="closeMenu" to="/angebot/systemischetherapie">Systemische Therapie</NuxtLink>
+        <NuxtLink @click="closeMenu" to="/angebot/familiengerichtlich">Familiengerichtlicher Kontext</NuxtLink>
+        <NuxtLink @click="closeMenu" to="/angebot/kinderschutzfachberatung">Kinderschutzfachberatung</NuxtLink>
+      </div>
+      <div class="menu-legal">
+        <NuxtLink @click="closeMenu" to="/impressum">Impressum</NuxtLink>
+        <NuxtLink @click="closeMenu" to="/privacypolicy">Datenschutzerklärung</NuxtLink>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+
 const isOpen = ref(false);
 const menuOpen = ref(false);
-const allowCloseAnimation = ref(false);
+const isScrolled = ref(false);
 
-
-const toggleNavIcon = () => {
-    if (!menuOpen.value) {
-        allowCloseAnimation.value = true
-    }
-    isOpen.value = !isOpen.value;
-    menuOpen.value = !menuOpen.value;
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
+  menuOpen.value = !menuOpen.value;
 };
+
+const closeMenu = () => {
+  isOpen.value = false;
+  menuOpen.value = false;
+};
+
+const handleScroll = () => {
+  const atf = document.querySelector('.atf-picture') as HTMLElement | null;
+  const threshold = atf ? atf.offsetHeight * 0.75 : 300;
+  isScrolled.value = window.scrollY > threshold;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style lang="scss">
 header {
   position: absolute;
   top: 0;
-  z-index: 15;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  height: var(--header-height);
+  z-index: 200;
   width: 100%;
+  height: var(--header-height);
+  pointer-events: none;
+}
 
-  .menu-bar {
-    position: fixed;
-    border-radius: 0 0 0 16px;
-    right: 0;
-    top: 0;
-    width: 0;
-    padding: 64px 0;
+/* ── Hamburger Button ───────────────────────────────────── */
+#nav-icon {
+  pointer-events: all;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    background: #f0f6f8;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+    transition: background 0.3s ease, filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+
+    &:nth-child(1) { top: 0; }
+    &:nth-child(2) { top: 9px; }
+    &:nth-child(3) { top: 18px; }
+  }
+
+  &.open span {
+    background: #f0f6f8;
+    filter: none;
+
+    &:nth-child(1) { transform: rotate(45deg); top: 9px; }
+    &:nth-child(2) { opacity: 0; transform: translateX(8px); }
+    &:nth-child(3) { transform: rotate(-45deg); top: 9px; }
+  }
+}
+
+/* Dark hamburger when scrolled past ATF */
+header.scrolled #nav-icon:not(.open) span {
+  background: #3d6170;
+  filter: none;
+}
+
+/* ── Backdrop ───────────────────────────────────────────── */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 500;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+/* ── Menu Panel ─────────────────────────────────────────── */
+.menu-panel {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: 360px;
+  max-width: 90vw;
+  background: rgba(#3d6170, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 3rem;
+  z-index: 600;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+
+  &.open {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  .menu-nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 64px;
-    background-color: rgba($color: #524d41, $alpha: 0.9);
-    opacity: 0;
-    overflow-x: hidden;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
+    gap: 0.25rem;
 
     a {
-      font-size: 2rem;
-      text-align: center;
-    }
-  }
-
-  nav {
-    display: flex;
-    gap: 24px;
-    padding-right: 32px;
-    font-size: 1.25em;
-
-    .link-active {
-      color: var(--secondary-brand-color);
-    }
-
-    #nav-icon4 {
-      position: fixed;
-      width: 30px;
-      right: 32px;
-      height: 22.5px;
-      z-index: 1000;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      -o-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #f0f6f8;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       cursor: pointer;
-    }
+      transition: color 0.2s ease, padding-left 0.2s ease;
+      letter-spacing: -0.01em;
 
-    #nav-icon4 span {
-      display: block;
-      position: absolute;
-      height: 3px;
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: #a8d4e0;
+        padding-left: 0.5rem;
+      }
+
+      &.router-link-active {
+        color: #a8d4e0;
+      }
+    }
+  }
+
+  .menu-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.5rem;
+
+    a {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: rgba(#f0f6f8, 0.55);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      letter-spacing: 0.02em;
+
+      &:hover {
+        color: rgba(#f0f6f8, 0.9);
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  #nav-icon {
+    right: 1.25rem;
+    top: 0.875rem;
+  }
+
+  .menu-panel {
+    left: 0;
+    right: 0;
+    width: auto;
+    font-size: 16px;
+    padding: 5rem 2rem 3rem;
+    gap: 2rem;
+    align-items: center;
+
+    .menu-nav {
       width: 100%;
-      background: #9a9a9a;
-      border-radius: 9px;
-      opacity: 1;
-      left: 0;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      -webkit-transition: .25s ease-in-out;
-      -moz-transition: .25s ease-in-out;
-      -o-transition: .25s ease-in-out;
-      transition: .25s ease-in-out;
+      align-items: center;
+
+      a {
+        font-size: 1.4rem;
+        padding: 0.65rem 0;
+        text-align: center;
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+
+        &:hover {
+          padding-left: 0;
+        }
+      }
     }
 
-    #nav-icon4 span:nth-child(1) {
-      top: 0px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center;
-    }
+    .menu-legal {
+      width: 100%;
+      align-items: center;
 
-    #nav-icon4 span:nth-child(2) {
-      top: 9px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center;
-    }
-
-    #nav-icon4 span:nth-child(3) {
-      top: 18px;
-      -webkit-transform-origin: left center;
-      -moz-transform-origin: left center;
-      -o-transform-origin: left center;
-      transform-origin: left center;
-    }
-
-    #nav-icon4.open span:nth-child(1) {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      top: -2px;
-      left: 8px;
-    }
-
-    #nav-icon4.open span:nth-child(2) {
-      width: 0%;
-      opacity: 0;
-    }
-
-    #nav-icon4.open span:nth-child(3) {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      top: 19.5px;
-      left: 8px;
+      a {
+        font-size: 0.9rem;
+        text-align: center;
+      }
     }
   }
-
 }
-
-.menu_open {
-  animation-duration: 0.5s;
-  animation-name: menu-slidein;
-  animation-fill-mode: forwards;
-}
-
-@keyframes menu-slidein {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-
-  to {
-    width: 33%;
-    opacity: 1;
-  }
-}
-
-@keyframes menu-slidein-mobile {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-
-  to {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-.menu_close {
-  animation-duration: 0.5s;
-  animation-name: menu-slideout;
-  animation-fill-mode: forwards;
-}
-
-@keyframes menu-slideout {
-  from {
-    width: 33%;
-    opacity: 1;
-  }
-
-  to {
-    width: 0;
-    opacity: 0;
-  }
-}
-
-@keyframes menu-slideout-mobile {
-  from {
-    width: 100%;
-    opacity: 1;
-  }
-
-  to {
-    width: 0;
-    opacity: 0;
-  }
-}
-
 </style>

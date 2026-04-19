@@ -272,12 +272,14 @@ form {
     }
 
     &:active {
-      background-image: linear-gradient(to right, rgb(95 90 73), rgb(82, 77, 65));
+      background-image: linear-gradient(to right, #3d6170, #2d4f5c);
     }
   }
 
   .submit-change {
-    background-image: linear-gradient(to right, rgb(137 135 105), rgb(117 113 89));
+    background-image: linear-gradient(to right, #4d7c8a, #3d6170);
+    color: #f0f6f8;
+    border: none;
   }
 }
 
@@ -307,7 +309,7 @@ form {
 
   #spinner {
     position: absolute;
-    --c: no-repeat linear-gradient(orange 0 0);
+    --c: no-repeat linear-gradient(#a8d4e0 0 0);
     background:
       var(--c), var(--c), var(--c),
       var(--c), var(--c), var(--c),

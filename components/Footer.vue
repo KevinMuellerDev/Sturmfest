@@ -6,7 +6,7 @@
         </div>
         <div class="site-links">
             <NuxtLink to="/impressum" activeClass="link-active">Impressum</NuxtLink>
-            <NuxtLink to="/privacypolicy" activeClass="link-active">Datenschutz / Haftungsausschluss</NuxtLink>
+            <NuxtLink to="/privacypolicy" activeClass="link-active">Datenschutz</NuxtLink>
         </div>
     </footer>
 </template>
@@ -19,10 +19,20 @@ footer {
     align-items: center;
     background-color: var(--primary-brand-color);
     height: 64px;
+    white-space: nowrap;
+
+    @media (max-width: 750px) {
+        padding: 0 16px;
+        gap: 8px;
+    }
 
     .img-links {
+        display: flex;
+        align-items: center;
+
         img {
             width: 32px;
+            display: block;
         }
     }
 
@@ -30,6 +40,15 @@ footer {
         display: flex;
         justify-content: space-around;
         gap: 16px;
+
+        a {
+            color: #f0f6f8;
+            font-size: var(--text-sm);
+
+            &:hover {
+                color: #a8d4e0;
+            }
+        }
     }
 }
 </style>
