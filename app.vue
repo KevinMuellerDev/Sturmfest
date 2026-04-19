@@ -1,5 +1,35 @@
 <script setup lang="ts">
-
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': 'https://www.systemische-therapie-mueller.de',
+        name: 'Sturmfest – Systemische Therapie Cathrin Müller',
+        description: 'Systemische Einzel-, Paar- und Familientherapie, Verfahrensbeistandschaft und Kinderschutzfachberatung in Dortmund.',
+        url: 'https://www.systemische-therapie-mueller.de',
+        telephone: '+4917662817991',
+        email: 'info@systemische-therapie-mueller.de',
+        image: 'https://www.systemische-therapie-mueller.de/assets/images/cathi_profil.webp',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Christine-Teusch-Bogen 47',
+          addressLocality: 'Dortmund',
+          postalCode: '44329',
+          addressCountry: 'DE'
+        },
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          description: 'Nur nach Vereinbarung'
+        },
+        sameAs: ['https://www.bveb-ev.de/']
+      })
+    }
+  ]
+})
 </script>
 
 <template>

@@ -180,6 +180,7 @@ form {
       color: var(--text-color);
       cursor: pointer;
       font-size: 16px;
+      font-family: inherit;
 
       &:hover {
         border-color: var(--hover);

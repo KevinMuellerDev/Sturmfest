@@ -1,3 +1,12 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Datenschutzerklärung | Sturmfest Systemische Therapie',
+  description: 'Datenschutzerklärung der Praxis Sturmfest – Systemische Familientherapie Cathrin Müller, Dortmund.',
+  robots: 'noindex, follow'
+})
+useHead({ link: [{ rel: 'canonical', href: 'https://www.systemische-therapie-mueller.de/privacypolicy' }] })
+</script>
+
 <template>
     <div class="page-header">
       <h1>Datenschutzerklärung</h1>

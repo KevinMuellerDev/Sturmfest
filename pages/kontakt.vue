@@ -1,3 +1,13 @@
+<script setup lang="ts">
+const url = 'https://www.systemische-therapie-mueller.de/kontakt'
+useSeoMeta({
+  title: 'Impressum | Sturmfest Systemische Therapie Cathrin Müller',
+  description: 'Impressum und Anbieterkennzeichnung von Cathrin Müller, Sturmfest Systemische Familientherapie, Dortmund.',
+  robots: 'noindex, follow'
+})
+useHead({ link: [{ rel: 'canonical', href: url }] })
+</script>
+
 <template>
   <div class="page-header">
     <h1>Impressum</h1>

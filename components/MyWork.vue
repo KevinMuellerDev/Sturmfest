@@ -4,7 +4,7 @@
   </div>
 
   <div class="page-card">
-    <img v-if="task.img" :src="`/assets/${task.img}`" alt="" class="task-image" />
+    <img v-if="task.img" :src="`/assets/${task.img}`" :alt="task.imgAlt || ''" class="task-image" />
 
     <section v-for="(offer, index) in task.offers" :key="index" class="task-section">
       <h2 v-html="offer.subtitle"></h2>

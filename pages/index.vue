@@ -104,25 +104,55 @@
 
 <script setup lang="ts">
 import ContactForm from '@/components/ContactForm.vue';
+
+const title = 'Cathrin Müller – Systemische Therapie & Beratung in Dortmund'
+const description = 'Systemische Einzel-, Paar- und Familientherapie in Dortmund. Cathrin Müller – zertifizierte Therapeutin, Verfahrensbeiständin und Kinderschutzfachberaterin.'
+const url = 'https://www.systemische-therapie-mueller.de'
+const image = `${url}/assets/images/cathi_profil.webp`
+
 useSeoMeta({
-  ogUrl: 'https://www.systemische-therapie-mueller.de',
-  twitterTitle: 'Sturmfest Systemische Therapie Cathrin Müller',
-  twitterDescription: 'Willkommen bei Cathrin Müller – Ihrer Expertin für Kindheitspädagogik, Familientherapie und Kinderschutzberatung im Ruhrgebiet.',
-  twitterImage: '/assets/atf.jpeg',
-  twitterCard: 'summary'
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: image,
+  ogUrl: url,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: image,
 })
+
 useHead({
   htmlAttrs: { lang: 'de' },
-  link: [{ rel: 'icon', type: 'image/ico', href: '/favicon.ico' }],
-  title: 'Sturmfest Systemische Therapie Cathrin Müller',
-  meta: [
-    { name: 'description', content: 'Willkommen bei Cathrin Müller – Ihrer Expertin für Kindheitspädagogik, Familientherapie und Kinderschutzberatung im Ruhrgebiet.' },
-    { property: 'og:title', content: 'Sturmfest Systemische Therapie Cathrin Müller' },
-    { property: 'og:description', content: 'Willkommen bei Cathrin Müller – Ihrer Expertin für Kindheitspädagogik, Familientherapie und Kinderschutzberatung im Ruhrgebiet.' },
-    { property: 'og:image', content: '/assets/atf.jpeg' },
-    { property: 'og:type', content: 'website' },
+  link: [
+    { rel: 'icon', type: 'image/ico', href: '/favicon.ico' },
+    { rel: 'canonical', href: url }
   ],
-});
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Cathrin Müller',
+        jobTitle: 'Systemische Therapeutin',
+        description,
+        url,
+        image,
+        worksFor: { '@type': 'LocalBusiness', name: 'Sturmfest – Systemische Therapie' },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Christine-Teusch-Bogen 47',
+          addressLocality: 'Dortmund',
+          postalCode: '44329',
+          addressCountry: 'DE'
+        }
+      })
+    }
+  ]
+})
 </script>
 
 <style scoped lang="scss">
